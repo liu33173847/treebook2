@@ -1,4 +1,6 @@
 Treebook::Application.routes.draw do
+  # static root config
+  get  '/about' => 'pages#about', as: :about
 
   as :user do
     get '/register', to: 'devise/registrations#new', as: :register
